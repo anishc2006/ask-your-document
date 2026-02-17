@@ -4,7 +4,7 @@ import logging
 import pandas as pd
 from typing import Any, List, Dict
 from PyPDF2 import PdfReader
-from langchain.schema import Document
+from langchain_core.documents import Document
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
@@ -141,3 +141,4 @@ def build_pipeline_from_uploads(uploaded_files: List[Any]) -> RetrievalQA:
     docs = load_files(uploaded_files)
     qa = build_qa_chain(docs)
     return qa
+
