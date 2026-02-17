@@ -142,3 +142,4 @@ def build_pipeline_from_uploads(uploaded_files: List[Any]) -> RetrievalQA:
     qa = build_qa_chain(docs)
     return qa
 
+
